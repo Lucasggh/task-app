@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 export default function Taskinput() {
   const { register } = useForm();
   return (
-    <form className="flex justify-center gap-3 p-3 bg-blue-400 w-100 rounded-xl flex-col">
+    <form className="flex justify-center gap-3 p-3 border-blue-600 border-2 bg-blue-400 w-100 rounded-xl flex-col">
         <div className="flex items-center">
       <label className="inline-block w-20" htmlFor="task">Tarefa: </label>
       <input
