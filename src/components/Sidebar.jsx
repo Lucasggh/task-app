@@ -6,9 +6,9 @@ export default function Sidebar(){
     return(
         <div className="w-60 bg-[#1E293B] flex flex-col items-center pt-20">
             <ul className="gap-5 flex flex-col">
-                { pages.map((task) =>{
+                { pages.map((task,index) =>{
                     return(
-                    <li>
+                    <li key={index}>
                         <button
                         className="w-fit p-2 justify-self-center bg-[#1E293B] border-2 border-[#334155] text-[#E2E8F0] rounded-md shadow-xl hover:bg-[#6366F1] hover:border-[#4F46E5] hover:scale-110 hover:shadow-xl/20 cursor-pointer transition-all duration-300 "
                         onClick={()=>navigate(task.link)}
