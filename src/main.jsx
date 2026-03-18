@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreateTask from "./Pages/CreateTask.jsx";
 import ListTask from "./Pages/ListTask.jsx";
-import Sidebar from "./components/Sidebar.jsx";
+import Sidebar from "./components/Navbar.jsx";
 import Layout from "./components/Layout.jsx";
 
 const router = createBrowserRouter([
@@ -24,10 +24,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="h-full flex flex-row w-full w-50">
-      <div className="flex-1">
         <RouterProvider router={router}></RouterProvider>
-      </div>
-    </div>
   </StrictMode>,
 );

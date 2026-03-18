@@ -17,10 +17,10 @@ export default function CreateTask() {
     alert(`new task created, tasks: ${tasks}`)
   }
   return (
-    <div className="gap-10 flex flex-col bg-[#011C27] w-auto h-full flex flex-col items-center p-10 gap-10">
+    <div className=" bg-[#0F172A] w-screen flex-1 flex justify-center items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex justify-center gap-3 p-3 border-[#1E293B] border-2 bg-[#0F172A] w-100 rounded-xl flex-col text-[#E2E8F0]"
+        className="flex justify-center gap-3 p-3 border-[#1E293B] border-2 bg-[#0F172A] w-fit rounded-md flex-col text-[#E2E8F0]"
       >
         <div className="flex items-center">
           <label className="inline-block w-20" htmlFor="task">
@@ -29,20 +29,20 @@ export default function CreateTask() {
           <input
             type="text"
             name="task"
-            className="flex-1 bg-[#1E293B] rounded-md m-1 border-2 border-[#334155] text-center resize-none text-white"
+            className="flex bg-[#1E293B] rounded-md m-1 border-2 border-[#334155] text-center resize-none text-white"
             {...register("title", { required: true })}
           />
         </div>
 
-        <div className="flex items-center">
-          <label className="inline-block w-20" htmlFor="inputTarefa">
+        <div className="flex items-start">
+          <label className="inline-block w-20 pt-1  " htmlFor="inputTarefa">
             Descrição:{" "}
           </label>
           <textarea
             type="text"
             placeholder="Nova tarefa "
             name="inputTarefa"
-            className="flex-1 bg-[#1E293B] rounded-md m-1 border-2 border-[#334155] text-center resize-none text-white"
+            className="flex h-20 bg-[#1E293B] rounded-md m-1 border-2 border-[#334155] text-center resize-none text-white"
             {...register("description")}
           ></textarea>
         </div>

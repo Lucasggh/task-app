@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom"
+import { IoMenuSharp } from "react-icons/io5";
 
-export default function Sidebar(){
+export default function Navbar(){
     const pages = [{text:"Create Task",link:"/"},{text:"Tasks",link:"/ListTask"}]
     const navigate = useNavigate()
     return(
-        <div className="w-60 bg-[#1E293B] flex flex-col items-center pt-20">
-            <ul className="gap-5 flex flex-col">
+        <div className=" w-fit h-15 bg-[#1E293B] flex justify-center items-center px-5 rounded-full">
+        <button> <IoMenuSharp color="white" size={50}/></button>
+        {/*<ul className="gap-5 flex flex-col">
                 { pages.map((task,index) =>{
                     return(
                     <li key={index}>
@@ -15,7 +17,7 @@ export default function Sidebar(){
                         >{task.text}</button>
                     </li>)
                 })}
-            </ul>
-        </div>
+            </ul> */}
+        </div>  
     )
 }

@@ -1,15 +1,14 @@
-import { Outlet} from "react-router-dom";
-import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
 import { useState } from "react";
 
 export default function Layout() {
-  const[tasks,setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
   return (
-    <div className="h-screen flex">
-      <Sidebar></Sidebar>
-      <div className="flex-1">
-        <Outlet context={[tasks,setTasks]}/>
-      </div>
+    <div className="min-h-screen flex flex-col justify-center items-center bg-[#0F172A]">
+      
+      <Outlet context={[tasks, setTasks]} />
+      <Navbar></Navbar>
     </div>
   );
 }
