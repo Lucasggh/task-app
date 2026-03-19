@@ -27,6 +27,7 @@ export default function CreateTask() {
             Tarefa:{" "}
           </label>
           <input
+            maxLength={25}
             type="text"
             name="task"
             className="flex bg-[#1E293B] rounded-md m-1 border-2 border-[#334155] text-center resize-none text-white"
